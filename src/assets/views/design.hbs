@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Luminary</title>
+    <link rel="stylesheet" type="text/css" href="/static/base.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"
+      integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm"
+      crossorigin="anonymous"
+      nonce="{{nonce}}"
+    ></script>
+  </head>
+  <body>
+    <main
+      hx-swap="innerHTML"
+      hx-get="{{#if path}}{{path}}{{else}}/{{/if}}"
+      hx-trigger="load once"
+    ></main>
+  </body>
+</html>
